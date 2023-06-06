@@ -1,0 +1,48 @@
+# GoDaddy Dynamic DNS Update Script
+
+This script is a simple solution for updating the DNS record of a domain hosted on GoDaddy with your current public IP address. It utilizes the GoDaddy API to update the DNS record whenever the IP address changes.
+
+## Prerequisites
+
+Before using this script, ensure you have the following:
+
+- An active domain registered with GoDaddy.
+- GoDaddy API key and API secret. You can obtain these credentials by following the GoDaddy API documentation.
+- Curl command-line tool installed on your system.
+
+## Getting Started
+
+1. Clone this repository or copy the contents of the script file (`update_dns.sh`) into a new file on your local machine.
+
+2. Open the script file in a text editor.
+
+3. Replace the following placeholders with your actual information:
+   - `your-domain.com`: Replace it with your actual domain name.
+   - `your-host`: Replace it with your actual host.
+   - `your-api-key`: Replace it with your GoDaddy API key.
+   - `your-api-secret`: Replace it with your GoDaddy API secret.
+
+
+4. Save the changes.
+
+5. Make the script executable by running the following command:
+chmod +x Godaddy.sh
+
+## Usage
+
+To update the DNS record with your current IP address, run the following command in your terminal:
+
+./Godaddy.sh
+
+
+The script will retrieve your current public IP address and compare it with the IP address associated with the specified host for your domain. If they are different and the current IP address is not empty, it will update the DNS record using the GoDaddy API.
+
+You can automate the execution of this script by setting up a cron job or a scheduled task on your system to run it at regular intervals.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
